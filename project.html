@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="MyWindowModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal1">&times;</span>
+            <h2>Hello My Friend!</h2>
+            <button class="button">0</button>
+            <button class="button"></button>
+            <button class="button">0</button>
+        </div>
+    </div>
+
+    <div id="imageContainer">
+        <img src="https://tse2.mm.bing.net/th?id=OIG3.wItv0l8Ur51Y6y4Kk.8z&w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn" alt="Image">
+    </div>
+
+    <p>&copy; Վահագն Ղազարյան 2024</p>
+    <script>
+
+        var modal = document.getElementById("MyWindowModal");
+        var imageContainer = document.getElementById("imageContainer");
+
+
+        var closeModal1 = document.getElementById("closeModal1");
+
+
+        closeModal1.onclick = function() {
+            modal.style.display = "none";
+            imageContainer.style.display = "block";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                imageContainer.style.display = "block";
+            }
+        };
+    </script>
+
+</body>
+
+</html>
